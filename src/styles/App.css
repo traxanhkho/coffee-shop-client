@@ -1,0 +1,397 @@
+.App {
+  height: 100vh;
+  display: grid;
+}
+
+html {
+  --primary: #6f263d;
+  --primary-transparent: #6f263dc2;
+
+  --primary-rgb: rgb(109, 31, 55);
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  background-image: url(../images/app-background.svg);
+  background-size: 94px 94px;
+  background-repeat: repeat;
+}
+
+main,
+footer,
+section {
+  padding: 40px 80px;
+}
+
+li {
+  list-style-type: none;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: var(--primary);
+  cursor: pointer;
+}
+
+.top-bar {
+  height: 384px;
+  width: 100%;
+  background-image: url(../images/homepage-background.jpeg);
+  background-size: cover;
+  background-position: center center;
+}
+
+/* validate form start */
+
+.container-input {
+  position: relative;
+}
+
+.container-input.hasError input  {
+  border-color: rgb(240, 61, 61) !important ;
+}
+
+.container-input.hasError textarea  {
+  border-color: rgb(240, 61, 61) !important ;
+}
+
+.text-danger {
+  position: absolute;
+  color: rgb(240, 61, 61);
+  bottom: -16px;
+  left: 12px;
+}
+
+.noti-not_auth {
+  font-size: 16px;
+  position: absolute;
+  color: rgb(240, 61, 61);
+  top: -24px;
+  text-align: center;
+  width: 100%;
+  background: #ff000026;
+  border-radius: 20px;
+}
+
+/* end validate form */
+
+/* input remove default arrow start */
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* end input remove default arrow */
+
+/* phone number input field start */
+
+.phone_number_field {
+  width: 100% !important;
+  height: 50px !important ;
+  border-radius: 20px !important;
+}
+
+.flag-dropdown,
+.selected-flag {
+  border-radius: 20px 0 0 20px !important ;
+}
+
+.containerClass_phone {
+  width: 400px !important;
+}
+
+/* end phone number input field */
+
+.logo {
+  width: 200px;
+  padding: 5px;
+}
+
+.header_nav {
+  margin-left: 1rem;
+}
+
+.header__nav ul {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.header__nav li {
+  list-style-type: none;
+
+  display: inline-block;
+  margin-left: 0;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  /* padding: 0.7rem; */
+  font-size: 1.7rem;
+  font-weight: 600;
+  align-items: center;
+}
+
+.link-no-white {
+  color: var(--primary);
+  margin-left: auto;
+}
+
+.link-no-white:hover {
+  color: #6f263dc7;
+  cursor: pointer;
+}
+
+/* sections style  */
+.section__style {
+  /* border-top: 0.5px solid rgba(255, 255, 255, 0.432); */
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.list__section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 350px);
+  place-content: center;
+  gap: 80px;
+}
+
+footer {
+  display: grid;
+  place-content: center;
+}
+
+footer div {
+  display: inline;
+}
+
+.footer-font-size {
+  font-size: 0.8rem;
+}
+
+.inline {
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center;
+  margin-top: 20px;
+}
+
+.center {
+  display: grid;
+  place-items: center;
+}
+
+button.badge {
+  background-color: var(--primary-transparent);
+  border: 1px solid var(--primary-transparent);
+  border-radius: 50%;
+  padding: 2px;
+  color: white;
+  width: 1.3rem;
+  font-weight: 600;
+}
+
+.quantity-btn {
+  width: 25px;
+  height: 25px;
+  /* padding: 5px 5px; */
+
+  border-radius: 0.25rem;
+
+  font-weight: bold;
+}
+
+.quantity-btn:hover,
+.checkout-btn:hover {
+  color: var(--primary-rgb);
+  cursor: pointer;
+}
+
+.remove-btn {
+  border: 2px solid;
+  background-color: white;
+}
+
+.add-btn {
+  border: 2px solid;
+  background-color: white;
+}
+
+.checkout-btn {
+  border: 3px solid;
+  background-color: white;
+  padding: 5px;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.space {
+  margin: 0px 40px;
+}
+
+.space-down {
+  margin-bottom: 20px;
+}
+
+.row {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 20px;
+
+  /* justify-content: space-between; */
+}
+
+.row.center {
+  /* align items vertically */
+  align-items: center;
+}
+
+.columns {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 5px;
+  font-size: 1.3rem;
+}
+
+strong {
+  font-size: 1.5rem;
+}
+
+.block {
+  display: grid;
+  /* grid-auto-flow: column; */
+  place-content: center;
+  gap: 10px;
+  /* background-color: #e0e0e093; */
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* back to top button _______________________________*/
+.back-to-top-link {
+  position: sticky;
+  transform: translateX(60px);
+
+  border: 3px solid var(--primary);
+  padding: 0.57rem 0.625rem;
+  border-radius: 100px;
+  box-shadow: inset 0 0 0 0.1rem var(--primary-rgb), inset 0 0 0 0.2rem #ffffff,
+    0 4px 12px #00000022;
+
+  background-color: var(--primary);
+
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 0.5rem;
+  font-weight: 800;
+  /* color: var(--primary-darker); */
+  color: white;
+
+  z-index: 100;
+  bottom: 40px;
+  left: 85vw;
+  height: 50px;
+  width: 50px;
+
+  cursor: pointer;
+}
+
+.back-to-top-link:hover {
+  background-color: var(--primary-lighter);
+  color: var(--primary-dark);
+}
+
+.checkoutGridWrapper {
+  display: grid;
+}
+
+.wrapperCheckout {
+  /* border: 1px solid black; */
+  display: grid;
+  grid-auto-flow: column;
+  gap: 10px;
+}
+
+.square {
+  height: 80px;
+  padding: 0px;
+  border-radius: 15px;
+  place-content: center;
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: 5px solid var(--primary);
+  background-color: white;
+  color: var(--primary);
+  cursor: pointer;
+}
+
+.square:hover {
+  background-color: var(--primary-transparent);
+  color: white;
+  transition: 0.6s;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 120px 1fr;
+}
+
+.loginForm,
+.signupForm {
+  display: grid;
+  /* height: calc(100vh - 112px); */
+  place-items: center;
+  align-content: center;
+  grid-template-rows: repeat(3, 50px);
+  grid-gap: 20px;
+}
+
+textarea {
+  width: 400px;
+  border-radius: 20px;
+  border: 1px solid lightgrey;
+  padding: 10px;
+  outline: none;
+  font-weight: 600;
+}
+
+input,
+.button {
+  width: 400px;
+  height: 50px;
+  border-radius: 20px;
+  border: 1px solid lightgrey;
+  padding: 10px;
+  outline: none;
+  font-weight: 600;
+}
+
+.button:hover {
+  color: var(--primary);
+  font-weight: 600;
+  transition: 0.6s;
+  background-color: #ffffff;
+}
+
+.smallImage {
+  width: 35px;
+}
