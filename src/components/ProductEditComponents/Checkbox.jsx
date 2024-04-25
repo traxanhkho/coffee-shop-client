@@ -39,8 +39,14 @@ function Checkbox({ items, product }) {
       const formData = new FormData();
 
       formData.append("type_id", Number(typeId));
+      // const response = await axios.post(
+      //   `http://coffee-shop-server.test/products/${product.id}/attach?_method=PUT`,
+      //   formData,
+      //   config
+      // );
+
       const response = await axios.post(
-        `http://coffee-shop-server.test/products/${product.id}/attach?_method=PUT`,
+        `http://127.0.0.1:8000/products/${product.id}/attach?_method=PUT`,
         formData,
         config
       );
@@ -109,8 +115,14 @@ function Checkbox({ items, product }) {
       const formData = new FormData();
 
       formData.append("type_id", Number(typeId));
+      // const response = await axios.post(
+      //   `http://coffee-shop-server.test/products/${product.id}/detach?_method=PUT`,
+      //   formData,
+      //   config
+      // );
+
       const response = await axios.post(
-        `http://coffee-shop-server.test/products/${product.id}/detach?_method=PUT`,
+        `http://127.0.0.1:8000/products/${product.id}/detach?_method=PUT`,
         formData,
         config
       );

@@ -67,8 +67,12 @@ export default function CategoryFilter({
 
     try {
       redirect(`?sort=${href}`);
+      // const resp = await axios.get(
+      //   `http://coffee-shop-server.test/orders?sort=${href}`
+      // );  
+      
       const resp = await axios.get(
-        `http://coffee-shop-server.test/orders?sort=${href}`
+        `http://127.0.0.1:8000/orders?sort=${href}`
       );
 
       const orders = resp.data.orders;

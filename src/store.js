@@ -3,7 +3,8 @@ import { toast } from "react-toastify";
 import create from "zustand";
 import { devtools } from "zustand/middleware";
 
-const basicUrl = "http://coffee-shop-server.test";
+const basicUrl = "http://127.0.0.1:8000";
+// const basicUrl = "http://coffee-shop-server.test";
 // const basicUrl = "http://coffee-shop-server.test/products?filter_type=3";
 
 const users = [
@@ -383,7 +384,8 @@ const dietsOnProduct = [
 
 const useStore = create(
   devtools((set, get) => ({
-    baseUrl: "http://coffee-shop-server.test/",
+    // baseUrl: "http://coffee-shop-server.test/",
+    baseUrl: "http://127.0.0.1:8000",
 
     bears: 0,
     increasePopulation: () => set((state) => ({ bears: state.bears + 1 })),
@@ -402,14 +404,14 @@ const useStore = create(
         return user;
       } catch (error) {
         console.error("message getUserByAccessToken", error);
-        return error;
+        return error; 
       }
     },
     getImagePath: (path) => {
       if (!path) return "/images";
       if (path.includes("http")) return path;
 
-      return basicUrl + "/" + path;
+      return basicUrl + "/storage/" + path;
     },
 
     signinUrl: `${basicUrl}/api/register`,
